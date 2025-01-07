@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ChronosChain"
+version = "0.1.0"
+description = "ChronosChain: Advanced Supply Chain Intelligence Platform An end-to-end ML solution for supply chain optimization, leveraging historical shipping data and real-time access logs to predict delivery risks, optimize shipping modes, and provide actionable insights."
+authors = [
+    {name = "Susamay Kumbhakar", email = "susamay.sk@gmail.com"}
+]
+# Using python 3.9.21 from conda ( conda create -p venv python=3.9.21 && conda activate path/to/venv/ )
+dependencies = [
+    "numpy",
+    "pandas",
+    "seaborn",
+    "matplotlib",
+    "scikit-learn",
+    "ipykernel",
+    "xgboost",
+    "catboost",
+    "dill",
+    "Flask"
+
+    # I'll be adding other dependencies here
+]
+
+[project.optional-dependencies]
+dev = [
+    # Development-specific dependencies here
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+# pip install -e . -> to install this project in editable mode 
